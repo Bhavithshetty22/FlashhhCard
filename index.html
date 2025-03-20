@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Card Creator</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Flash Card Creator</h1>
+        
+        <div class="form-card">
+            <div class="form-group">
+                <label for="question">Question</label>
+                <input type="text" id="question" placeholder="Type your question here">
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject">
+                        <option value="" disabled selected>Select subject</option>
+                        <option value="chemistry">Chemistry</option>
+                        <option value="physics">Physics</option>
+                        <option value="mathematics">Mathematics</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="chapter">Chapter</label>
+                    <input type="text" id="chapter" placeholder="Which Chapter">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="answer">Answer</label>
+                <input type="text" id="answer" placeholder="Type your answer here">
+            </div>
+            
+            <button id="create-btn" class="create-btn">Create Flash Card</button>
+            <div style="clear: both;"></div>
+        </div>
+        
+        <div id="cards-container" class="cards-container">
+            <!-- Flash cards will be added here dynamically -->
+        </div>
+        
+        <button id="delete-btn" class="delete-btn hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
